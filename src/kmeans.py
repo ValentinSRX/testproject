@@ -109,7 +109,7 @@ class Kmeans:
             if nb_samples != 0:
                 self.centroids[k] = (1 / nb_samples) * X[data_clusters == k, :].sum(
                     axis=0
-                )  # k x n
+                )
 
     def _stopping_criterion(self, iter: int, old_centroids: torch.Tensor) -> bool:
         """
@@ -123,7 +123,7 @@ class Kmeans:
         """
         # Either the maxmimum number of iterations is reached
         # or the centroids do not move.
-        return iter == self.max_iters or torch.equal(self.centroids, old_centroids)
+        return iter == (self.max_iters or torch.equal(self.centroids, old_centroids))
 
     def _logger_config(self) -> None:
         """
