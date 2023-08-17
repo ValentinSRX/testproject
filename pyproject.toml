@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "mlfs"
+version = "0.1.0"
+description = "Machine Learning From Scratch lib"
+authors = ["Youssef Achenchabe <youssef.achenchabe@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+numpy = "^1.25.2"
+torch = ">=2.0.0, !=2.0.1"
+tqdm = "^4.66.1"
+scipy = "^1.11.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+black = "^23.7.0"
+ruff = "^0.0.284"
+mypy = "^1.5.1"
+pylint = "^2.17.5"
+flake8 = "^6.1.0"
+interrogate = "^1.5.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
