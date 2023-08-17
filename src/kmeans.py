@@ -1,5 +1,5 @@
 """
-K-means  class
+K-means j class
 
 """
 import logging
