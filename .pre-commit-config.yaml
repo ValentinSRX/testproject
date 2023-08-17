@@ -7,7 +7,8 @@ repos:
     rev: 1.5.0  
     hooks:
     - id: interrogate
-      args: [-vv, -i, --fail-under=80]
+      args: [-vv, -i, --fail-under=80, --exclude=tests]
+      exclude: ^tests/
 -   repo: https://github.com/pre-commit/mirrors-mypy
     rev: 'v1.5.1'  
     hooks:
