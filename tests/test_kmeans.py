@@ -28,3 +28,8 @@ def test_kmeans(example_data: torch.Tensor) -> None:
     else:
         assert sum((centroid_1 - torch.tensor(mean2)) ** 2) < 1
         assert sum((centroid_2 - torch.tensor(mean1)) ** 2) < 1
+
+
+def test2_kmeans(example_data: torch.Tensor) -> None:
+    """yes"""
+    assert 1 == 1
